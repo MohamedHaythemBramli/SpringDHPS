@@ -37,6 +37,10 @@ public class ProduitController {
     public Produit getProduit(@PathVariable String name){
         return repo.findByName(name);
     }
+    @GetMapping(path = "/produitByname/{price}")
+    public Produit getProduitByPrice(@PathVariable Long price){
+        return repo.findByPrice(price);
+    }
 
 
 }
